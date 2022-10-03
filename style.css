@@ -1,0 +1,40 @@
+h1 {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.grid {
+    margin: 0 auto;
+    display: flex;
+    background-color: rgb(49, 218, 15);
+    width: 560px;
+    height: 560px;
+    border: solid black;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.wall {
+    background-color: #867039;
+}
+
+
+.wolf {
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+
+.rabbit {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.home {
+    background-color: rgb(119, 193, 246);
+}
