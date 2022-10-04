@@ -2,6 +2,20 @@ h1 {
     width: max-content;
     margin: 0 auto;
 }
+h2 {
+    width: max-content;
+    margin: 0 auto;
+}
+
+button {
+    max-width: 13%;
+    padding: 5px 10px;
+    background-color: green;
+    color: aliceblue;
+    border: 0px solid ;
+    border-radius: 5px;
+    margin: 5px 45%;
+}
 
 .grid {
     margin: 0 auto;
