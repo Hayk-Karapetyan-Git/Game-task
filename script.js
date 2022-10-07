@@ -1,5 +1,6 @@
 const button = document.getElementById("btn");
-button.addEventListener("click", () => {
+
+const manipuliations = () => {
   const width = 28;
   const grid = document.querySelector("#root");
   const layout = [
@@ -49,6 +50,11 @@ button.addEventListener("click", () => {
     }
   }
   createMap();
+  const clearMap = () => {
+    for (let i = 0; i < layout.length; i++) {
+      Iterators[i].remove();
+    }
+  }
 
   let rabbitCurrentIndex = Math.trunc(Math.random() * 784);
 
@@ -236,18 +242,20 @@ button.addEventListener("click", () => {
     if (Iterators[rabbitCurrentIndex].classList.contains("wolf")) {
       // wolfes.forEach(wolf => clearInterval(wolf.timerId))
       document.removeEventListener("keyup", moveRabbit);
-      setTimeout(function () {
         alert("Game Over");
-      }, 500);
+      clearMap()
+      button.addEventListener("click",manipuliations ,{once:true});
     }
   }
   function checkForWin() {
     if (rabbitCurrentIndex == homeCurrentIndex) {
       // wolfes.forEach(wolf => clearInterval(wolf.timerId))
       document.removeEventListener("keyup", moveRabbit);
-      setTimeout(function () {
         alert("You have WON!");
-      }, 500);
+      clearMap()
+      button.addEventListener("click",manipuliations ,{once:true});
     }
   }
-});
+}
+
+button.addEventListener("click",manipuliations ,{once:true});
